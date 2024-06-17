@@ -15,8 +15,8 @@ class FirestoreService {
   }
 
   // READ: get to dos from Firestore
-  Stream<QuerySnapshot> getToDoStream() {
-    return notes.orderBy('timestamp', descending: true).snapshots();
+  Stream<QuerySnapshot> getToDoStream(bool isDescending) {
+    return notes.orderBy('timestamp', descending: isDescending).snapshots();
   }
 
   // UPDATE: updates to do given a document ID
