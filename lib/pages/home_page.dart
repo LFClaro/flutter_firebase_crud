@@ -136,6 +136,7 @@ class _HomePageState extends State<HomePage> {
                               trailing: Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
+                                  if (!data['done'])
                                   IconButton(
                                     onPressed: () async => openToDoBox(
                                       docId: docId,
